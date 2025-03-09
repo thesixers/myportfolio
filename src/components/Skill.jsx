@@ -1,8 +1,25 @@
+import { useRef } from "react";
 import { userProfile } from "../utils"
+import { motion, useInView } from "framer-motion";
+
 
 export default function Skill(){
+    const ref = useRef(null);
+    const isInView = useInView(ref);
     return(
-        <div id="skill">
+        <motion.div 
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1 }}
+            id="skill"
+        >
+            <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+        >
+             <div>
             <h2>Eperienced in</h2>
             <div className="skills">
                <div className="icons">
@@ -23,5 +40,7 @@ export default function Skill(){
                </div>
             </div>
         </div>
+        </motion.div>
+        </motion.div>
     )
 }
