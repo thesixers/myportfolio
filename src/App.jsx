@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Nav from './components/Nav'
-import Intro from './components/intro'
+import Intro from './components/Intro'
 import Projects from './components/Projects'
 import Skill from './components/Skill'
 import Contact from './components/Contact'

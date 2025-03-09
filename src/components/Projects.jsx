@@ -5,23 +5,7 @@ import { useInView, motion } from "framer-motion";
 export default function Projects(){
     const ref = useRef(null);
   const isInView = useInView(ref);
-  const [index, setIndex] = useState(0);
-
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % userProfile.projects.length);
-  };
-
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + userProfile.projects.length) % userProfile.projects.length);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [index]);
-
+  
     return(
         <motion.div
             ref={ref}
