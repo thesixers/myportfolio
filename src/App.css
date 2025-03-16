@@ -160,14 +160,71 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  max-width: 300px;
+  margin: auto;
+  /* border: 1px solid; */
+  align-items: center;
+  position: relative;
+}
+
+.next,
+.prev{
+  cursor: pointer;
+  position: absolute;
+}
+
+.next{
+  right: 0px;
+}
+
+.prev{
+  left: 0px;
+}
+
+.pct{
+  width: 100%;
+  overflow: hidden;
 }
 
 .project{
-  width: 180px;
+  width: 85%;
   height: 310px;
   background-color: rgb(22, 22, 22);
   padding: 20px;
   border-radius: 10px;
+  /* transform: translateY(350px); */
+}
+
+.project-right{
+  animation: pright 0.5s ease-in;
+}
+
+.project-left{
+  animation: pleft 0.5s ease-in;
+}
+
+@keyframes pright {
+  0%{
+    transform: translateX(220px);
+  }
+  2%{
+    transform: translateY(400px) translateX(-380px);
+  }
+  50%{
+    transform: translateX(-430px);
+  }
+}
+
+@keyframes pleft {
+  0%{
+    transform: translateX(-220px);
+  }
+  2%{
+    transform: translateY(400px) translateX(380px);
+  }
+  50%{
+    transform: translateX(430px);
+  }
 }
 
 .project img{

@@ -21,7 +21,7 @@ export const userProfile = {
     ],
     projects: [
         {name: 'Gx Movies', description: '', repo: 'https://github.com/thesixers/movies-site', link: 'https://movies-site-4woj.onrender.com', logo: ''},
-        {name: 'The WebToon Project', description: '', repo: '', link: 'https://thewebtoonproject.com/', logo: '/twp_logo.jpg'},
+        {name: 'The WebToon Project', description: '', repo: 'https://github.com/thesixers/twp2', link: 'https://thewebtoonproject.com/', logo: '/twp_logo.jpg'},
     ],
     cv: '/cv.docx',
     socials: [
