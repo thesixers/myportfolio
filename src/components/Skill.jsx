@@ -20,7 +20,7 @@ export default function Skill(){
             transition={{ duration: 1 }}
         >
              <div>
-            <h2>Eperienced in</h2>
+            <h2>Experienced in</h2>
             <div className="skills">
                <div className="icons">
                     {

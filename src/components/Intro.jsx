@@ -1,5 +1,5 @@
 import {userProfile} from '../utils'
-import me from '../assets/NA.jpeg'
+import me from "../assets/newNA.jpg"
 import { motion } from 'framer-motion';
 
 

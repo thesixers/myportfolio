@@ -32,13 +32,11 @@ export default function Projects(){
             transition={{ duration: 1 }}
             id="projects"
         >
-            <h2 className="title">Projects</h2>
+            <h2 className="title">Projects({userProfile.projects.length})</h2>
             <div className="projects">
-            {
-                ((index > 0) && <span className="material-symbols-outlined prev" onClick={prev}>
+            <span className={"material-symbols-outlined prev " + (index === 0 ? " brown" : "")} onClick={prev}> 
                 arrow_back_ios
-                </span>)
-            }
+            </span>
                 <div className="pct">
                     <div className="project" ref={nextRef}>
                         <img src={userProfile.projects[index].logo} alt="" />
@@ -54,15 +52,11 @@ export default function Projects(){
                         </div>
                     </div>
                 </div>
-                {
-                    (index !== num  && 
-                    <span className="material-symbols-outlined next" 
+                    <span className={"material-symbols-outlined next " + (index === num ? "brown" : "") }
                     onClick={next} 
                     >
                     arrow_forward_ios
                     </span>
-                    )
-                }
             </div>
         </motion.div>
     )

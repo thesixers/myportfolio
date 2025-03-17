@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iansui&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0.5rem;
   text-align: center;
+  /* font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal; */
+  font-family: "Iansui", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .logo {
@@ -98,6 +108,9 @@ body{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-family: "Iansui", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 .intro-message div{
   color: #fff;
@@ -171,6 +184,11 @@ body{
 .prev{
   cursor: pointer;
   position: absolute;
+  font-size: 60px;
+}
+
+.brown{
+  color: rgba(128, 128, 128, 0.226);
 }
 
 .next{
