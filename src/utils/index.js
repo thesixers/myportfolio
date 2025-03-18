@@ -20,8 +20,8 @@ export const userProfile = {
         {name: 'socket.io', icon: 'sockectio.png'}
     ],
     projects: [
-        {name: 'Gx Movies', description: '', repo: 'https://github.com/thesixers/movies-site', link: 'https://movies-site-4woj.onrender.com', logo: ''},
-        {name: 'The WebToon Project', description: '', repo: 'https://github.com/thesixers/twp2', link: 'https://thewebtoonproject.com/', logo: '/twp_logo.jpg'},
+        {name: 'Gx Movies', description: 'A website where users come to download and watch movies', repo: 'https://github.com/thesixers/movies-site', link: '#', logo: ''},
+        {name: 'The WebToon Project', description: 'A webtoon publishing platform that allows creators to share their comics with a global audience', repo: 'https://github.com/thesixers/twp2', link: 'https://thewebtoonproject.com/', logo: '/twp_logo.jpg'},
     ],
     cv: '/cv.docx',
     socials: [

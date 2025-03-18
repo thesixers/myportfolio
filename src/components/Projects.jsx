@@ -41,9 +41,9 @@ export default function Projects(){
                     <div className="project" ref={nextRef}>
                         <img src={userProfile.projects[index].logo} alt="" />
                         <div className="details">
-                            <div className="p-name">{}</div>
+                            <div className="p-name">{userProfile.projects[index].name}</div>
                             <div className="p-intro">
-                                {}
+                                {userProfile.projects[index].description}
                             </div>
                             <div className="p-btns">
                                 <a href={userProfile.projects[index].link} target="_blank">Preview</a>
