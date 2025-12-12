@@ -23,11 +23,13 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-24 px-4 bg-white">
+        <section className="py-24 px-4 bg-white dark:bg-slate-950 transition-colors duration-500">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-extrabold text-slate-900 mb-4">What I Bring to the Table</h2>
-                    <p className="text-slate-500 max-w-2xl mx-auto">
+                    <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+                        What I Bring to the Table
+                    </h2>
+                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
                         Turning wild "what if?" ideas into fully functional code.
                     </p>
                 </div>
@@ -40,19 +42,34 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2, type: "spring", stiffness: 100 }}
                             whileHover={{ y: -10 }}
-                            className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 relative overflow-hidden group hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300"
+                            // DARK MODE MAGIC:
+                            // dark:bg-slate-900/50 -> Semi-transparent dark card
+                            // dark:border-white/10 -> Subtle border
+                            // hover:dark:shadow-indigo-500/20 -> Glowing shadow
+                            className="
+                                bg-slate-50 dark:bg-slate-900/50 
+                                p-8 rounded-[2rem] 
+                                border border-slate-100 dark:border-white/5 
+                                relative overflow-hidden group 
+                                hover:shadow-2xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/20 
+                                transition-all duration-300
+                            "
                         >
                             {/* Decorative background circle */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 rounded-bl-full opacity-50 transition-transform group-hover:scale-110"></div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-100 dark:bg-indigo-500/10 rounded-bl-full opacity-50 transition-transform group-hover:scale-110"></div>
 
                             <div className="text-5xl mb-6 relative z-10">
                                 {service.icon}
                             </div>
                             
-                            <h3 className="text-2xl font-bold text-slate-900 mb-1">{service.title}</h3>
-                            <span className="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-4 block">{service.subtitle}</span>
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                                {service.title}
+                            </h3>
+                            <span className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-widest mb-4 block">
+                                {service.subtitle}
+                            </span>
                             
-                            <p className="text-slate-600 leading-relaxed">
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                 {service.desc}
                             </p>
                         </motion.div>

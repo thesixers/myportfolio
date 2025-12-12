@@ -59,44 +59,42 @@ export default function Contact() {
             >
                 {/* LEFT SIDE: The Pitch */}
                 <div className="space-y-8">
-                    <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-tight">
+                    <h2 className="text-5xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight transition-colors">
                         Let's start a <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
                             Revolution.
                         </span>
                     </h2>
                     
-                    <p className="text-slate-500 text-lg leading-relaxed">
+                    <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
                         I'm currently open to new projects and crazy ideas. 
                         Whether you need a secure Web3 architecture or a stunning Webtoon platform, 
                         I'm ready to build.
                     </p>
 
-                    {/* Copy Email Interaction */}
+                    {/* Copy Email */}
                     <div 
                         onClick={copyEmail}
-                        className="group flex items-center gap-4 cursor-pointer w-fit p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-300"
+                        className="group flex items-center gap-4 cursor-pointer w-fit p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-white/5 hover:border-indigo-200 dark:hover:border-indigo-500/30 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all duration-300"
                     >
-                        <div className="bg-white p-3 rounded-xl shadow-sm group-hover:scale-110 transition-transform text-2xl">
+                        <div className="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm group-hover:scale-110 transition-transform text-2xl">
                             📧
                         </div>
                         <div>
                             <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Me Directly</p>
-                            <p className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            <p className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                 {copied ? "Copied to clipboard! ✅" : myEmail}
                             </p>
                         </div>
                     </div>
                 </div>
 
-                {/* RIGHT SIDE: The Conversational Form */}
-                <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl shadow-indigo-100 border border-slate-100 relative overflow-hidden">
-                    {/* Background decoration */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-300 rounded-bl-full opacity-20 pointer-events-none"></div>
-
-                    <form onSubmit={sendMessage} className="relative z-10 font-medium text-lg md:text-2xl leading-relaxed text-slate-400">
+                {/* RIGHT SIDE: The Form */}
+                <div className="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-[2.5rem] shadow-2xl shadow-indigo-100 dark:shadow-none border border-slate-100 dark:border-white/5 relative overflow-hidden transition-colors duration-500">
+                    
+                    <form onSubmit={sendMessage} className="relative z-10 font-medium text-lg md:text-2xl leading-relaxed text-slate-400 dark:text-slate-500">
                         <p>
-                            Hey <span className="text-slate-900 font-bold">GeNeSix</span>,
+                            Hey <span className="text-slate-900 dark:text-white font-bold">GeNeSix</span>,
                         </p>
                         
                         <div className="my-4">
@@ -107,7 +105,7 @@ export default function Contact() {
                                 placeholder="Your Name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="inline-block bg-transparent border-b-2 border-slate-200 focus:border-indigo-500 text-slate-900 outline-none px-2 py-1 mx-2 w-full md:w-auto transition-colors placeholder:text-slate-300"
+                                className="inline-block bg-transparent border-b-2 border-slate-200 dark:border-slate-700 focus:border-indigo-500 dark:focus:border-indigo-400 text-slate-900 dark:text-white outline-none px-2 py-1 mx-2 w-full md:w-auto transition-colors placeholder:text-slate-300 dark:placeholder:text-slate-600"
                             />
                             .
                         </div>
@@ -120,7 +118,7 @@ export default function Contact() {
                                 placeholder="a project / idea"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="inline-block bg-transparent border-b-2 border-slate-200 focus:border-indigo-500 text-slate-900 outline-none px-2 py-1 mx-2 w-full md:w-auto transition-colors placeholder:text-slate-300"
+                                className="inline-block bg-transparent border-b-2 border-slate-200 dark:border-slate-700 focus:border-indigo-500 dark:focus:border-indigo-400 text-slate-900 dark:text-white outline-none px-2 py-1 mx-2 w-full md:w-auto transition-colors placeholder:text-slate-300 dark:placeholder:text-slate-600"
                             />
                             .
                         </div>
@@ -133,7 +131,7 @@ export default function Contact() {
                                 placeholder="your@email.com"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="inline-block bg-transparent border-b-2 border-slate-200 focus:border-indigo-500 text-slate-900 outline-none px-2 py-1 mx-2 w-full md:w-auto transition-colors placeholder:text-slate-300"
+                                className="inline-block bg-transparent border-b-2 border-slate-200 dark:border-slate-700 focus:border-indigo-500 dark:focus:border-indigo-400 text-slate-900 dark:text-white outline-none px-2 py-1 mx-2 w-full md:w-auto transition-colors placeholder:text-slate-300 dark:placeholder:text-slate-600"
                             />
                             to discuss further.
                         </div>
@@ -145,7 +143,7 @@ export default function Contact() {
                             className={`mt-8 px-8 py-4 rounded-full font-bold text-white text-base shadow-lg transition-all flex items-center gap-2
                                 ${status === 'success' ? 'bg-green-500' : 
                                   status === 'error' ? 'bg-red-500' : 
-                                  'bg-slate-900 hover:bg-indigo-600'}`}
+                                  'bg-slate-900 dark:bg-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-500'}`}
                         >
                             <AnimatePresence mode="wait">
                                 {status === 'idle' && (

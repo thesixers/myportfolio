@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* 👇 THIS LINE ENABLES DARK MODE CLASS LOGIC */
+@variant dark (&:where(.dark, .dark *));
+
+/* Global Smooth Transition for background colors */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}

@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react'
-import { motion, useScroll, useSpring } from 'framer-motion'
-import Nav from './components/Nav'
-import Intro from './components/Intro'
-import Projects from './components/Projects'
-import Skill from './components/Skill'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Journey from './components/Journey'
-import Services from './components/Services'
+import { useState, useEffect } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import Nav from "./components/Nav";
+import Intro from "./components/Intro";
+import Projects from "./components/Projects";
+import Skill from "./components/Skill";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Journey from "./components/Journey";
+import Services from "./components/Services";
 
 // 1. The "Bouncy" Section Wrapper
 const Section = ({ children, id, setCurrentNav }) => {
@@ -24,8 +24,8 @@ const Section = ({ children, id, setCurrentNav }) => {
     >
       {children}
     </motion.section>
-  )
-}
+  );
+};
 
 // 2. Custom Cursor (Tailwind Styled)
 const Cursor = () => {
@@ -45,66 +45,67 @@ const Cursor = () => {
       transition={{ type: "spring", stiffness: 500, damping: 28 }}
     />
   );
-}
+};
 
 function App() {
-  const [currentNav, setCurrentNav] = useState('Intro')
-  
+  const [currentNav, setCurrentNav] = useState("Intro");
+
   // 3. Fun Scroll Progress Bar
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   return (
     // Tailwind: Light gray bg, hidden horizontal overflow
-    <div className="bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-indigo-200">
-      
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 overflow-x-hidden selection:bg-indigo-500 selection:text-white transition-colors duration-500">
       {/* Progress Bar: Fixed at top, h-2, gradient color */}
-      <motion.div 
-        className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 origin-left z-[60]" 
-        style={{ scaleX }} 
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 origin-left z-[60]"
+        style={{ scaleX }}
       />
-      
+
       {/* Hide cursor on desktop to show custom one */}
       <div className="hidden md:block">
         <Cursor />
       </div>
 
-      <Nav currentNav={currentNav} setCurrentNav={setCurrentNav}/>
+      <Nav currentNav={currentNav} setCurrentNav={setCurrentNav} />
 
       <div className="flex flex-col">
         {/* REARRANGED ORDER */}
+        {/* Intro: Gojo peeking from the side */}
+
         <Section id="Intro" setCurrentNav={setCurrentNav}>
-          <Intro/>
+          <Intro />
         </Section>
 
         <Section id="Services" setCurrentNav={setCurrentNav}>
-          <Services/>
+          <Services />
         </Section>
 
         <Section id="Projects" setCurrentNav={setCurrentNav}>
-          <Projects/>
+          <Projects />
         </Section>
 
         <Section id="Journey" setCurrentNav={setCurrentNav}>
-          <Journey/>
+          <Journey />
         </Section>
 
         <Section id="Skill" setCurrentNav={setCurrentNav}>
-          <Skill/>
+          <Skill />
         </Section>
 
         <Section id="Contact" setCurrentNav={setCurrentNav}>
-          <Contact/>
+          <Contact />
         </Section>
-        
-        <Footer/>
+
+        <Footer />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
