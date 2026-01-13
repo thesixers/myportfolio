@@ -15,7 +15,7 @@ export const userProfile = {
     {
       name: "Nexa",
       type: "mobile", // <--- TELLS THE CARD THIS IS AN APP
-      preview: "/images/nexa-preview.jpg",
+      preview: "/nexa.png",
       description:
         "A secure, cross-platform communication powerhouse. Features real-time messaging, voice/video calls, and client-side encryption. Designed to rival industry standards.",
       technologies: ["React Native", "Node.js", "WebSockets", "Encryption"],
@@ -42,6 +42,15 @@ export const userProfile = {
       repo: "https://github.com/thesixers/twp-vite",
       link: "https://thewebtoonproject.com/",
     },
+    {
+      "name": "Vibes",
+      "type": "desktop",
+      "preview": "https://raw.githubusercontent.com/thesixers/vibes/refs/heads/main/assets/icon.png",
+      "description": "A cross-platform desktop music player that organizes your local library, fetches clean metadata and album art via Spotify, and provides a modern, user-friendly interface.",
+      "technologies": ["Electron", "JavaScript", "Node.js", "Tailwind CSS"],
+      "repo": "https://github.com/thesixers/vibes",
+      "link": "https://github.com/thesixers/vibes/releases/latest"
+    }    
   ],
 
   // Updated Skills based on your "Arsenal"
