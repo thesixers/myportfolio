@@ -94,7 +94,7 @@ export default function Contact() {
                     
                     <form onSubmit={sendMessage} className="relative z-10 font-medium text-lg md:text-2xl leading-relaxed text-slate-400 dark:text-slate-500">
                         <p>
-                            Hey <span className="text-slate-900 dark:text-white font-bold">GeNeSix</span>,
+                            Hey <span className="text-slate-900 dark:text-white font-bold">Nnamdi</span>,
                         </p>
                         
                         <div className="my-4">
@@ -147,11 +147,11 @@ export default function Contact() {
                         >
                             <AnimatePresence mode="wait">
                                 {status === 'idle' && (
-                                    <>Send It <span className="text-xl">🚀</span></>
+                                    <>Send It <span className="text-xl"></span></>
                                 )}
                                 {status === 'loading' && "Transmitting..."}
-                                {status === 'success' && "Received! 📬"}
-                                {status === 'error' && "Error! ⚠️"}
+                                {status === 'success' && "Received! "}
+                                {status === 'error' && "Error! "}
                             </AnimatePresence>
                         </motion.button>
                     </form>

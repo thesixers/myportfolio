@@ -62,7 +62,7 @@ export default function Intro() {
 
             {/* The GeNeSix Badge - Cyberpunk Style */}
             <div className="inline-block bg-slate-900 dark:bg-black/50 text-green-400 font-mono px-4 py-2 rounded-xl text-lg md:text-xl shadow-lg border border-slate-700 dark:border-green-500/30 dark:shadow-green-500/20 backdrop-blur-md">
-              &lt;NA /&gt;
+              &lt;GeNeSix /&gt;
             </div>
           </motion.div>
 
