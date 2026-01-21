@@ -14,23 +14,23 @@ export const userProfile = {
   projects: [
     {
       name: "Nexa",
-      type: "mobile", // <--- TELLS THE CARD THIS IS AN APP
+      type: "mobile",
       preview: "/nexa.png",
       description:
         "A secure, cross-platform communication powerhouse. Features real-time messaging, voice/video calls, and client-side encryption. Designed to rival industry standards.",
       technologies: ["React Native", "Node.js", "WebSockets", "Encryption"],
       repo: "https://github.com/thesixers/nexa_ui",
-      link: "https://nexa-live-link.com/download", // This becomes the Download link
+      link: "https://nexa-live-link.com/download",
     },
     {
       name: "HKAI - Course Builder",
-      type: "web", // <--- TELLS THE CARD THIS IS A WEBSITE
-      preview: "https://hkai-web.onrender.com/assets/logo-CLnazNvh.png",
+      type: "web",
+      preview: "https://hkai.site/logo.png",
       description:
         "An intelligent learning platform that uses AI to generate course structures and content automatically. Bridges the gap between raw data and structured education.",
       technologies: ["LLM Integration", "React", "Fastify", "PostgreSQL"],
       repo: "https://github.com/harperkollinsinc-bit/HKAI_WEB",
-      link: "https://hkai-web.onrender.com/",
+      link: "https://hkai.site/",
     },
     {
       name: "The Webtoon Project",
